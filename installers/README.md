@@ -87,9 +87,9 @@ make
 
 ### Python 3
 
-Let us use Miniconda (https://conda.io) for encapsulating the Python environment and to make sure everybody uses the same versions of Python and libraries.
+I highly recommend useing Miniconda (https://conda.io) for encapsulating the Python environment and to make sure to have the same versions of Python and libraries.
 
-Download the Miniconda installation shell script:
+Downloading the Miniconda installation shell script:
 
 ```bash
 cd installers
@@ -106,7 +106,7 @@ bash Miniconda3-latest-Linux-x86_64.sh
 
 It will ask you where it should install Miniconda. You can either go with the default (`~/miniconda3`) or put it into a subdirectory of this project's tree, e.g., `.../tools/miniconda3`.
 
-It will also ask you whether or not it should add things to your `~/.bashrc`.  The choice is yours, but be aware of the reults:
+It will also ask you whether or not it should add things to your `~/.bashrc`.  Choose what you prefer, but be aware of the reults:
 
 * **Answering no** means that you will always have to specify the path to your conda installation when you create/delete/activate conda environments, e.g.: `~/miniconda3/bin/conda create -n my_env python`
 `source ~/miniconda3/bin/activate my_env`
@@ -121,9 +121,6 @@ Create an environment based on the file `environment.yml` stored in this directo
 conda env create -f installers/environment.yml # or ~/miniconda3/bin/conda env create -f installers/environment.yml
 ```
 
-(I have created that file via `conda env export > environment.yml`, then removed the "prefix" line, which contained an absolute path).
-
-
 To activate the environment:
 
 ```bash
@@ -135,5 +132,3 @@ While activated, "install" the root directory of this git repository in editable
 ```bash
 pip install -e .../basis_speech
 ```
-
-We will put our python modules and sub-packages into the directory `.../basis_speech/basis_speech`. With this "installation" in place, you can `import basis_speech` from everywhere. Changes to the code require no re-installation or anything, just re-run your scripts that import stuff from the `basis_speech` package.
