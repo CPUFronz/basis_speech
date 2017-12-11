@@ -3,6 +3,8 @@
 ## About
 This is the code for my student's project "Supervised Learning of Basis Function Coefficients for Computer-generated Speech". The project was about investigating a new method how to predict spectral parameters for speech synthesis. First these spectral parameters are encoded as coefficients of basis functions (as legendre polynomials), then these basis function coefficients are used for training machine learning models on those coefficients and the corresponding phones.
 
+The project was carried out in collaboration with the [Austrian Research Institute for Artificial Intelligence](http://ofai.at) (with [Dietmar Schabus](http://www.schabus.xyz/) and [Paolo Petta](http://ofai.at/~paolo.petta/)).
+
 ## Installation
 See [README.md](installers/README.md) for the installation instructions.
 
